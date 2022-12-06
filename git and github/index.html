@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> CUBE LUMINEUX</title>
+    <style>
+ body{
+    padding: 0;
+    margin:  0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: var(--dark);
+
+}
+ :root{
+    --size: 3000px;
+    --dark: rgb(15, 15, 27);
+    --cyan: #00ffff;
+}
+.cube{
+    width: var(--size);
+    height: var(--size);
+    position: relative;
+    transform-style: preserve-3d; 
+    transform: rotateX('-30deg')
+    animation: anim 4s infinite;
+}&asssssssssssssssssssssssssssssssswwwwwwwwg 
+@keyframes anim {
+    0%{
+        transform: rotateX('-30deg') rotateY(0);
+}
+100%{
+    transform: rotateX('-30deg') rotateX('360deg');
+}
+}
+.cube div{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+
+
+}
+.cube div span{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(var(--dark), var(--cyan) );
+    transform: rotateY(calc(90deg * var(--i))) translateZ(calc(var(--size) / 2));
+}
+.cube .top{
+    background-color: rgb(27, 27, 38);
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: rotateX(90deg) translateZ(calc(var(**size) /2));
+}
+.top::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--cyan);
+    transform: rotateX(0deg) translateZ(calc((var(--size) * -1) - 70px));
+    filter: blur(10px);
+    box-shadow: 
+    0 0 200px rgb(0, 255, 255, 0.6),
+    0 0 400px rgb(0, 255, 255, 0.8);
+}
+ 
+    </style>
+</head> 
+<body>
+ <div class="cube">  
+<div class="top"></div>
+<div>
+<span style="--i:0;"></span>
+<span style="--i:1;"></span>
+<span style="--i:2;"></span>
+<span style="--i:3;"></span>
+</div>
+
+
+
+</div>
+</body>
+</html>
